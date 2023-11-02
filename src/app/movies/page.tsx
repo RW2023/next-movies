@@ -1,28 +1,31 @@
 /* eslint-disable @next/next/no-img-element */
 // src/app/movies/page.tsx
+'use client'
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SearchBar from '../../components/SearchBar';
 
 interface MovieItem {
-  Title: string;
-  Year: string;
+  title: string;
+  year: string;
   imdbID: string;
-  Type: string;
-  Poster: string;
+  type: string;
+  image?: {
+    url: string;
+  };
 }
 
 const MoviesPage: React.FC = () => {
-  const [movies, setMovies] = useState<MovieItem[]>([]); // Ensure initial state is an empty array
+  const [movies, setMovies] = useState<MovieItem[]>([]);
 
   const handleSearch = async (query: string) => {
     try {
       const response = await fetch(
-        `/api/movies?s=${encodeURIComponent(query)}`,
+        `/api/movies?query=${encodeURIComponent(query)}`,
       );
       const data = await response.json();
-      if (data.Search) {
-        setMovies(data.Search);
+      if (data.results) {
+        setMovies(data.results);
       } else {
         console.error('Unexpected API response:', data);
       }
@@ -32,28 +35,27 @@ const MoviesPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='container flex flex-col justify-center' >
       <h1>Movie List</h1>
       <SearchBar onSearch={handleSearch} />
       <ul>
-        {movies.map(
-          (
-            movie, // Corrected 'movies' to 'movie'
-          ) => (
-            <li key={movie.imdbID}>
-              <Link href={`/movies/${movie.imdbID}`}>
-                <a>
-                  <img
-                    src={movie.Poster}
-                    alt={`${movie.Title} Poster`}
-                    width={100}
-                  />
-                  {movie.Title} ({movie.Year})
-                </a>
-              </Link>
-            </li>
-          ),
-        )}
+        {movies.map((movie) => (
+          <li key={movie.imdbID}>
+            <Link href={`/movies/${movie.imdbID}`}>
+              {movie.image ? (
+                <img
+                  src={movie.image.url}
+                  alt={`${movie.title} Poster`}
+                  width="100"
+                  height="150"
+                />
+              ) : (
+                <div>No image available</div>
+              )}
+              {movie.title} ({movie.year})
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
