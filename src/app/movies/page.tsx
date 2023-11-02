@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SearchBar from '../../components/SearchBar';
-
+import Image from 'next/image';
 interface MovieItem {
   title: string;
   year: string;
@@ -44,10 +44,12 @@ const MoviesPage: React.FC = () => {
             <Link href={`/movies/${movie.imdbID}`}>
               <div className="block">
                 {movie.image ? (
-                  <img
+                  <Image
                     src={movie.image.url}
                     alt={`${movie.title} Poster`}
-                    className="w-full h-48 object-cover mb-2 rounded"
+                    width={100}
+                    height={150}
+                    className="object-cover mb-2 rounded"
                   />
                 ) : (
                   <div className="w-full h-48 mb-2 bg-gray-200 flex items-center justify-center rounded">
