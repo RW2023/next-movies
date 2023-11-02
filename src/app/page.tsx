@@ -1,7 +1,15 @@
-import Image from 'next/image'
 
 export default function Home() {
   return (
-    <h1>Movie List</h1>
+   
+
+      <>
+        <div>
+          <h1 className="text-3xl text-center text-headline">Flix Finder</h1>
+        </div>
+        <div className="container flex flex-col align-baseline h-screen grid-cols-4 w-full" data-theme='black'>
+        </div>
+      </>
+  
   )
 }
