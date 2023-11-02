@@ -35,24 +35,29 @@ const MoviesPage: React.FC = () => {
   };
 
   return (
-    <div className='container flex flex-col justify-center' >
-      <h1>Movie List</h1>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Movie List</h1>
       <SearchBar onSearch={handleSearch} />
-      <ul>
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
         {movies.map((movie) => (
-          <li key={movie.imdbID}>
+          <li key={movie.imdbID} className="bg-white p-4 rounded shadow">
             <Link href={`/movies/${movie.imdbID}`}>
-              {movie.image ? (
-                <img
-                  src={movie.image.url}
-                  alt={`${movie.title} Poster`}
-                  width="100"
-                  height="150"
-                />
-              ) : (
-                <div>No image available</div>
-              )}
-              {movie.title} ({movie.year})
+              <div className="block">
+                {movie.image ? (
+                  <img
+                    src={movie.image.url}
+                    alt={`${movie.title} Poster`}
+                    className="w-full h-48 object-cover mb-2 rounded"
+                  />
+                ) : (
+                  <div className="w-full h-48 mb-2 bg-gray-200 flex items-center justify-center rounded">
+                    No image available
+                  </div>
+                )}
+                <h2 className="text-lg font-semibold">
+                  {movie.title} ({movie.year})
+                </h2>
+              </div>
             </Link>
           </li>
         ))}
