@@ -38,25 +38,25 @@ const MoviesPage: React.FC = () => {
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Movie List</h1>
       <SearchBar onSearch={handleSearch} />
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 text-black max-h-0">
         {movies.map((movie) => (
-          <li key={movie.imdbID} className="bg-white p-4 rounded shadow">
+          <li key={movie.imdbID} className="bg-secondary p-4 rounded shadow justify-center">
             <Link href={`/movies/${movie.imdbID}`}>
               <div className="block">
                 {movie.image ? (
                   <Image
                     src={movie.image.url}
                     alt={`${movie.title} Poster`}
-                    width={100}
-                    height={150}
-                    className="object-cover mb-2 rounded"
+                    width={300}
+                    height={350}
+                    className="object-cover mb-2 rounded drop-shadow-lg w-full h-auto"
                   />
                 ) : (
-                  <div className="w-full h-48 mb-2 bg-gray-200 flex items-center justify-center rounded">
+                  <div className="w-full h-48 mb-2  flex items-center justify-center rounded bg-black text-headline">
                     No image available
                   </div>
                 )}
-                <h2 className="text-lg font-semibold">
+                <h2 className="text-lg font-semibold text-center">
                   {movie.title} ({movie.year})
                 </h2>
               </div>
