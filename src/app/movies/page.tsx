@@ -1,10 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
 // src/app/movies/page.tsx
-'use client'
+/* eslint-disable @next/next/no-img-element */
+'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import SearchBar from '../../components/SearchBar';
 import Image from 'next/image';
+import Loading from '@/components/Loading';
 
 interface MovieItem {
   title: string;
@@ -18,8 +19,10 @@ interface MovieItem {
 
 const MoviesPage: React.FC = () => {
   const [movies, setMovies] = useState<MovieItem[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = async (query: string) => {
+    setLoading(true);
     try {
       const response = await fetch(
         `/api/movies?query=${encodeURIComponent(query)}`,
@@ -33,15 +36,23 @@ const MoviesPage: React.FC = () => {
     } catch (error) {
       console.error('API request failed:', error);
     }
+    setLoading(false);
   };
 
   return (
-    <div className="container mx-auto p-4 mb-4  bg-base-700 mt-4 justify-center" data-theme='dracula'>
+    <div
+      className="container mx-auto p-4 mb-4  bg-base-100 justify-center"
+      data-theme="dracula"
+    >
       <h1 className="text-2xl font-bold mb-4 m-4 ">Flix Finder App</h1>
       <SearchBar onSearch={handleSearch} />
-      {movies.length === 0 ? (
-        <div className="text-center mt-4" data-theme='dracula'>
-          <h2 className="text-xl">Enter a search term to find movies and tv shows</h2>
+      {loading ? (
+        <Loading />
+      ) : movies.length === 0 ? (
+        <div className="text-center mt-4" data-theme="dracula">
+          <h2 className="text-xl">
+            Enter a search term to find movies and tv shows
+          </h2>
           <p>Search by title, show or the featured actors </p>
         </div>
       ) : (
@@ -49,7 +60,7 @@ const MoviesPage: React.FC = () => {
           {movies.map((movie) => (
             <li
               key={movie.imdbID}
-              className="bg-secondary p-4 rounded shadow justify-center"
+              className="bg-secondary p-4 rounded shadow justify-center text-tertiary font-serif"
             >
               <Link href={`/movies/${movie.imdbID}`}>
                 <div className="block">
