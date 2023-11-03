@@ -20,9 +20,9 @@ export default function Home() {
         <div className="flex flex-col justify-center items-center bg-background p-4 rounded-lg shadow-lg">
           <h2 className="mb-4">Search your favorite movie</h2>
           <Image
-            src="/theater.jpg"
-            alt="theater"
-            width={500}
+            src="/darkNight.png"
+            alt="Dark Night"
+            width={400}
             height={450}
             className="object-cover rounded-lg shadow-lg bg-tertiary  p-1"
           />
