@@ -5,7 +5,7 @@ interface Props {}
 
 const Navbar: FC<Props> = (props): JSX.Element => {
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-tertiary border fixed top-0 w-full z-50">
       <div className="flex">
         <Link href={'/'} className="btn btn-ghost normal-case text-xl">
           Flix Finder
@@ -21,3 +21,4 @@ const Navbar: FC<Props> = (props): JSX.Element => {
 };
 
 export default Navbar;
+
