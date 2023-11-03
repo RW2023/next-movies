@@ -15,7 +15,7 @@ const SearchBar: React.FC<{ onSearch: (query: string) => void }> = ({
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className=" border-4 border-gray-600 rounded-lg p-2 bg-headline text-black sm:w-full sm:p-5 w-3/4  my-3 "
+        className=" border-4 border-headline rounded-lg p-2 bg-tertiary text-highlight  text-lg  sm:w-full sm:p-5 w-3/4  my-3"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
