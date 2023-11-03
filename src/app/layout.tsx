@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import './globals.css'
+import Navbar from '@/components/Navbar'
 
 
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme='black'>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+        </body>
     </html>
   )
 }

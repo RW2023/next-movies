@@ -15,11 +15,11 @@ const SearchBar: React.FC<{ onSearch: (query: string) => void }> = ({
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className="border-4 border-gray-600 rounded-lg p-2 bg-headline text-black w-full"
+        className=" border-4 border-gray-600 rounded-lg p-2 bg-headline text-black sm:w-full sm:p-5 w-3/4  my-3 "
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for a movie, actor or show..."
+        placeholder="Search for a movie, actor ..."
       />
       <button type="submit" className='m-3'>Search</button>
     </form>

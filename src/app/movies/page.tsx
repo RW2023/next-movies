@@ -36,15 +36,16 @@ const MoviesPage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 mb-4  bg-black mt-4">
-      <h1 className="text-2xl font-bold mb-4 m-4">Flix Finder App</h1>
+    <div className="container mx-auto p-4 mb-4  bg-base-700 mt-4 justify-center" data-theme='dracula'>
+      <h1 className="text-2xl font-bold mb-4 m-4 ">Flix Finder App</h1>
       <SearchBar onSearch={handleSearch} />
       {movies.length === 0 ? (
-        <div className="text-center mt-4">
-          <h2 className="text-xl">Enter a search term to find movies</h2>
+        <div className="text-center mt-4" data-theme='dracula'>
+          <h2 className="text-xl">Enter a search term to find movies and tv shows</h2>
+          <p>Search by title, show or the featured actors </p>
         </div>
       ) : (
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  text-black max-h-0 mt-8">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4   max-h-0 mt-8">
           {movies.map((movie) => (
             <li
               key={movie.imdbID}
