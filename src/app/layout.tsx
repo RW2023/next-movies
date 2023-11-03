@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme='black'>
-      <body>
-        <Navbar />
+      <body className='mt-16'>
+        <Navbar/>
         {children}
         </body>
     </html>
