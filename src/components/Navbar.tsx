@@ -9,11 +9,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-base-500 border p-6 font-sans navbar mt-3">
+    <nav className="sticky z-0 top-0 navbar flex items-center justify-between flex-wrap bg-background border p-1 font-sans">
       {' '}
       <div className="flex items-center flex-shrink-0 font-bold  text-2xl mr-6">
         <Link href="/">
-          <span className="font-semibold text-xl tracking-tight cursor-pointer hover:text-button">
+          <span className="font-semibold text-xl tracking-tight cursor-pointer hover:text-button ml-1">
             Flix Finder{' '}
           </span>
         </Link>
