@@ -4,7 +4,7 @@ interface Props {}
 
 const Footer: FC<Props> = (props): JSX.Element => {
   return (
-    <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-4">
+    <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-1 min-h-full">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">About Me</a>
         <a className="link link-hover">Contact</a>
@@ -49,7 +49,7 @@ const Footer: FC<Props> = (props): JSX.Element => {
         </div>
       </nav>
       <aside>
-        <p>Copyright © 2023 - All right reserved by Ryan Wilson</p>
+        <p>Copyright © 2023 - by Ryan Wilson</p>
       </aside>
     </footer>
   );
