@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="container mx-auto mt-6 p-4">
-      <div className="text-3xl text-center text-headline mb-6 mt-8">
+    <div className="container mx-auto mt-1 p-4">
+      <div className="text-3xl text-center text-headline mb-2 mt-3">
         <Link
         href={'/movies'}
         >
