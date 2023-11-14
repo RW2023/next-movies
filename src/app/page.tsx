@@ -1,3 +1,4 @@
+import Heading from '@/components/Heading';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -5,7 +6,11 @@ export default function Home() {
   return (
     <div className="container mx-auto mt-6 p-4">
       <div className="text-3xl text-center text-headline mb-6 mt-8">
-        <Link href="/movies" className="p-2 m-1">Search For Movies</Link>
+        <Link
+        href={'/movies'}
+        >
+          <Heading title="Find FLix" />
+        </Link>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="flex flex-col justify-center items-center bg-background p-4 rounded-lg shadow-lg">
