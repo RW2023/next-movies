@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Heading from '@/components/Heading';
-import SubHeading from '@/components/SubHeading';
+import Heading from '@/components/ui/Heading';
+import SubHeading from '@/components/ui/SubHeading';
 
 
 
