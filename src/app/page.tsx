@@ -22,7 +22,7 @@ export default function Home() {
               src="/freeman.jpg"
               alt="morgan freeman"
               width={500}
-              height={450}
+              height={500}
               className="object-cover rounded-lg shadow-lg bg-base-300  p-1 border-2 border-base"
             />
           </div>
