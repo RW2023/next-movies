@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
-import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Flix Finder',
