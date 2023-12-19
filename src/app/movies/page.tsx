@@ -6,6 +6,7 @@ import Link from 'next/link';
 import SearchBar from '@/components/ui/SearchBar';
 import Image from 'next/image';
 import Loading from '@/components/ui/Loading';
+import SubHeading from '@/components/ui/SubHeading';
 
 interface MovieItem {
   title: string;
@@ -40,9 +41,7 @@ const MoviesPage: React.FC = () => {
   };
 
   return (
-    <div
-      className="container mx-auto p-4 mb-4  bg-base-100 justify-center"
-    >
+    <div className="container mx-auto p-4 mb-4  bg-base-100 justify-center">
       <h1 className="text-2xl font-bold mb-4 m-4 ">Flix Finder App</h1>
       <SearchBar onSearch={handleSearch} />
       {loading ? (
@@ -55,7 +54,7 @@ const MoviesPage: React.FC = () => {
           <p>Search by title, show or the featured actors </p>
         </div>
       ) : (
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  mt-8">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  mt-8 card">
           {movies.map((movie) => (
             <li
               key={movie.imdbID}
@@ -72,12 +71,16 @@ const MoviesPage: React.FC = () => {
                       className="object-cover mb-2 rounded drop-shadow-xl w-full h-auto"
                     />
                   ) : (
-                    <div className="w-full mb-2 flex items-center justify-center rounded bg-base-300 text-headline border border-base-200 shadow-md">                      No image available
+                    <div className="mb-2 flex items-center justify-center rounded bg-base-300  border-2 border-base-200 shadow-md">
+                      {' '}
+                      No image available
                     </div>
                   )}
-                  <h2 className="text-lg font-semibold text-center">
-                    {movie.title} ({movie.year})
-                  </h2>
+                  <div className="card-title">
+                    {movie.year && (
+                      <SubHeading title={`${movie.title} (${movie.year})`} />
+                    )}
+                  </div>
                 </div>
               </Link>
             </li>
