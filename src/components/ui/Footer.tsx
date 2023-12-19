@@ -1,4 +1,5 @@
 import { FC } from 'react';
+ import Link from 'next/link';
 
 interface Props {}
 
@@ -6,14 +7,21 @@ const Footer: FC<Props> = (props): JSX.Element => {
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-1 min-h-full">
       <nav className="grid grid-flow-col gap-4">
-        <a className="link link-hover">About Me</a>
-        <a className="link link-hover">Contact</a>
-        <a className="link link-hover">Website</a>
-        <a className="link link-hover">Feedback</a>
+       
+
+        <Link href="/about" className="link link-hover">
+          About Me
+        </Link>
+        <Link href="/contact" className="link link-hover">
+          Contact
+        </Link>
+        <Link href="/feedback" className="link link-hover">
+          Feedback
+        </Link>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
-          <a>
+          {/* <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -45,7 +53,7 @@ const Footer: FC<Props> = (props): JSX.Element => {
             >
               <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
             </svg>
-          </a>
+          </a> */}
         </div>
       </nav>
       <aside>
