@@ -1,4 +1,4 @@
-import Heading from '@/components/Heading';
+import Heading from '@/components/ui/Heading';
 import Image from 'next/image';
 import Link from 'next/link';
 
