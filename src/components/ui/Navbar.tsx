@@ -91,12 +91,13 @@ const Navbar = () => {
         } w-full lg:flex lg:items-center lg:w-auto lg:justify-end`}
       >
         <div className="text-sm lg:flex-grow">
-          <Link href="/projects">
+          <Link
+          href={'/movies'}>
             <span
               onClick={closeNavbar}
-              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:underline mr-4 cursor-pointer"
             >
-              <i className="fas fa-info-circle mr-2"></i>Projects
+              <i className="fas fa-video mr-2"></i>Movies
             </span>
           </Link>
           <Link href="/about">
@@ -104,7 +105,7 @@ const Navbar = () => {
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
             >
-              <i className="fas fa-images mr-2"></i>About Me
+              <i className="fas fa-images mr-2"></i>About
             </span>
           </Link>
           <Link href="/feedback">
