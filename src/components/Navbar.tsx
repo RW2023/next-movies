@@ -1,20 +1,48 @@
-// src/Components/UI/Navbar.tsx
-
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
+import SubHeading from './SubHeading';
+import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Function to close the navbar
+  const closeNavbar = () => {
+    setIsOpen(false);
+  };
+
+  // Construct Cloudinary URL for your image with transformations
+  const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_60,h_60,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
+
   return (
-    <nav className="sticky z-0 top-0 navbar flex items-center justify-between flex-wrap bg-background border p-1 font-sans">
-      {' '}
-      <div className="flex items-center flex-shrink-0 font-bold  text-2xl mr-6">
+    <nav
+      className="flex items-center justify-between flex-wrap p-3 navbar mt-0 sticky top-0 z-20 bg-base-200 shadow-2xl bg-opacity-90"
+      style={{ fontFamily: "'Poppins', sans-serif" }}
+      // data-theme="black"
+    >
+      <div className="flex items-center flex-shrink-0 text-2xl mr-6">
         <Link href="/">
-          <span className="font-semibold text-xl tracking-tight cursor-pointer hover:text-button ml-1">
-            Flix Finder{' '}
+          <span
+            onClick={closeNavbar}
+            className="font-semibold text-xl tracking-tight cursor-pointer"
+          >
+            <div className="flex items-center">
+              {' '}
+              {/* Flexbox container */}
+              {/* Image */}
+              {/* <img
+                src={imageUrl}
+                alt="Ryan Wilson"
+                width="60"
+                height="60"
+                className="rounded-full"
+              /> */}
+              {/* SubHeading */}
+              <SubHeading title="flix finder" iconClass='fas fa-film' />
+            </div>
           </span>
         </Link>
       </div>
@@ -22,13 +50,12 @@ const Navbar = () => {
         <button
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          className="text-xl inline-flex items-center justify-center p-2 rounded-md hover:text-buttonText hover:bg-button focus:outline-none focus:ring-2 focus:ring-inset focus:ring-base-500"
+          className="text-4xl inline-flex items-center justify-center p-2 rounded-md hover:bg-button hover:text-buttonText focus:outline-none focus:ring-2 focus:ring-inset focus:ring-buttonText text-base-content"
         >
           {isOpen ? (
-            // Close icon when the menu is open
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-10 w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -41,10 +68,9 @@ const Navbar = () => {
               />
             </svg>
           ) : (
-            // Hamburger icon when the menu is closed
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-10 w-10"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -65,21 +91,39 @@ const Navbar = () => {
         } w-full lg:flex lg:items-center lg:w-auto lg:justify-end`}
       >
         <div className="text-sm lg:flex-grow">
-          <Link href="/">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-button  mr-4 cursor-pointer">
-              Home
+          <Link href="/projects">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
+            >
+              <i className="fas fa-info-circle mr-2"></i>Projects
             </span>
           </Link>
-          <Link href="/movies">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-button mr-4 cursor-pointer">
-              Search Movies
+          <Link href="/about">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl  hover:underline mr-4 cursor-pointer"
+            >
+              <i className="fas fa-images mr-2"></i>About Me
             </span>
           </Link>
-          {/* <Link href="/contact">
-            <span className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:text-buttonText cursor-pointer">
-              Contact
+          <Link href="/feedback">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:underline mr-4 cursor-pointer"
+            >
+              <i className="fas fa-comments mr-2"></i>Feedback
             </span>
-          </Link> */}
+          </Link>
+          <Link href="/contact">
+            <span
+              onClick={closeNavbar}
+              className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:underline cursor-pointer mr-2"
+            >
+              <i className="fas fa-envelope mr-2"></i>Contact
+            </span>
+          </Link>
+          <DarkModeToggle />
         </div>
       </div>
     </nav>
