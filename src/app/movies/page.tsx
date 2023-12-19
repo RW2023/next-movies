@@ -3,9 +3,9 @@
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
-import SearchBar from '../../components/SearchBar';
+import SearchBar from '@/components/ui/SearchBar';
 import Image from 'next/image';
-import Loading from '@/components/Loading';
+import Loading from '@/components/ui/Loading';
 
 interface MovieItem {
   title: string;
