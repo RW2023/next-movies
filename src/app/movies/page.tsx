@@ -42,7 +42,6 @@ const MoviesPage: React.FC = () => {
   return (
     <div
       className="container mx-auto p-4 mb-4  bg-base-100 justify-center"
-      data-theme="dracula"
     >
       <h1 className="text-2xl font-bold mb-4 m-4 ">Flix Finder App</h1>
       <SearchBar onSearch={handleSearch} />
@@ -60,7 +59,7 @@ const MoviesPage: React.FC = () => {
           {movies.map((movie) => (
             <li
               key={movie.imdbID}
-              className="bg-secondary p-4 rounded shadow justify-center text-tertiary font-serif"
+              className="bg-base-300 p-4 rounded shadow justify-center  font-serif"
             >
               <Link href={`/movies/${movie.imdbID}`}>
                 <div className="block">
@@ -73,8 +72,7 @@ const MoviesPage: React.FC = () => {
                       className="object-cover mb-2 rounded drop-shadow-xl w-full h-auto"
                     />
                   ) : (
-                    <div className="w-full h-48 mb-2 flex items-center justify-center rounded bg-black text-headline">
-                      No image available
+                    <div className="w-full mb-2 flex items-center justify-center rounded bg-base-300 text-headline border border-base-200 shadow-md">                      No image available
                     </div>
                   )}
                   <h2 className="text-lg font-semibold text-center">
