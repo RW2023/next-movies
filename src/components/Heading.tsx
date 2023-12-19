@@ -4,6 +4,7 @@ import React, { FC, useState } from 'react';
 
 interface Props {
   title: string;
+  iconClass?: string;
 }
 
 const Heading: FC<Props> = (props): JSX.Element => {
