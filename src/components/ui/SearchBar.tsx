@@ -1,4 +1,4 @@
-'use client'
+'use client';
 // src/components/SearchBar.tsx
 import React, { useState } from 'react';
 
@@ -21,7 +21,9 @@ const SearchBar: React.FC<{ onSearch: (query: string) => void }> = ({
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search for a movie, actor ..."
       />
-      <button type="submit" className='m-3'>Search</button>
+      <button type="submit" className="btn btn-primary m-3 border border-base-200">
+        Search
+      </button>{' '}
     </form>
   );
 };
