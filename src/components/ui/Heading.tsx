@@ -1,26 +1,27 @@
 //src/Components/UI/Heading.tsx
-'use client';
-import React, { FC, useState } from 'react';
+import React from 'react';
 
 interface Props {
   title: string;
   iconClass?: string;
 }
 
-const Heading: FC<Props> = (props): JSX.Element => {
-  // State to manage the theme
-  const [theme, setTheme] = useState('luxury'); // Default theme
+const Heading = ({ title , iconClass}: Props): JSX.Element => {
+  const toTitleCase = (text: string): string =>
+    text.replace(
+      /\w\S*/g,
+      (word) => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase(),
+    );
 
-  // Function to handle theme change
-  const handleThemeChange = (newTheme: string) => {
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-  };
+  const titleCaseText = toTitleCase(title);
 
   return (
     <div>
-      <h1 className="text-center font-sans text-4xl m-8">{props.title}</h1>
-      </div>
+      <h1 className="text-center font-sans text-4xl m-8">
+        {iconClass && <i className={`${iconClass} mr-2`}></i>}
+        {titleCaseText}
+      </h1>
+    </div>
   );
 };
 
