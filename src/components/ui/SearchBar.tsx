@@ -1,4 +1,4 @@
-'use client'
+'use client';
 // src/components/SearchBar.tsx
 import React, { useState } from 'react';
 
@@ -13,15 +13,17 @@ const SearchBar: React.FC<{ onSearch: (query: string) => void }> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex items-center justify-center ">
       <input
-        className=" border-4 border-headline rounded-lg p-2 bg-tertiary text-highlight  text-lg  sm:w-full sm:p-5 w-3/4  my-3"
+        className="border-2 border-headline rounded-lg p-2 bg-tertiary text-highlight text-lg sm:p-1 w-3/4 lg:w-1/2 my-3"
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for a movie, actor ..."
+        placeholder="Search ..."
       />
-      <button type="submit" className='m-3'>Search</button>
+      <button type="submit" className="btn btn-primary m-3 border border-base-200">
+        Search
+      </button>
     </form>
   );
 };

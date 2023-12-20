@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/ui/Navbar';
 import Footer from '@/components/ui/Footer';
-import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Flix Finder',
@@ -16,14 +15,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="halloween">
       <head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </head>
-      <body>
+      <body className='min-h-screen'>
         <Navbar />
         {children}
       </body>
