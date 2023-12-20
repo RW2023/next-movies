@@ -44,7 +44,7 @@ const MoviesPage: React.FC = () => {
     <div
     // style={{ backgroundImage: "url('/movie.jpg')" }}
     >
-      <Image src="/movie.jpg" alt="Movie" layout="fill" objectFit="stretch" />
+      <Image src="/movie.jpg" alt="Movie" layout="fill" objectFit="cover" />
 
       <div className="hero-content text-center text-neutral-content">
         <div className="container mx-auto p-4 mb-4 bg-base-100 justify-center rounded-md drop-shadow-2xl">
@@ -78,7 +78,7 @@ const MoviesPage: React.FC = () => {
                         />
                       ) : (
                         <div className="mb-2 flex items-center justify-center rounded bg-base-300 border-2 border-base-200 shadow-md">
-                          No image available
+                        <p>No Image Available</p>
                         </div>
                       )}
                       <div className="card-title">
