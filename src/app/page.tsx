@@ -32,7 +32,7 @@ export default function Home() {
                 iconClass="fas fa-search"
               />{' '}
             </Link>
-            <div className="card-body">
+            <div className="card-body glass rounded-md drop-shadow-xl">
               <Image
                 src="/freeman.jpg"
                 alt="morgan freeman"
@@ -57,7 +57,7 @@ export default function Home() {
                 />
               </Link>
             </div>
-            <div className="card-body">
+            <div className="card-body glass rounded-md drop-shadow-xl">
               <Image
                 src="/darkNight.png"
                 alt="Dark Night"
