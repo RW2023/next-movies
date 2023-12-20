@@ -7,6 +7,7 @@ import SearchBar from '@/components/ui/SearchBar';
 import Image from 'next/image';
 import Loading from '@/components/ui/Loading';
 import SubHeading from '@/components/ui/SubHeading';
+import Heading from '@/components/ui/Heading';
 
 interface MovieItem {
   title: string;
@@ -46,7 +47,7 @@ const MoviesPage: React.FC = () => {
 
       <div className="hero-content text-center text-neutral-content">
         <div className="container mx-auto p-4 mb-4 bg-base-100 justify-center rounded-md drop-shadow-2xl">
-          <h1 className="text-2xl font-bold mb-4 m-4">Flix Finder App</h1>
+          <Heading title = "flix finder" iconClass='fas fa-film'/>
           <SearchBar onSearch={handleSearch} />
           {loading ? (
             <Loading />
