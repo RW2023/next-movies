@@ -41,9 +41,7 @@ const MoviesPage: React.FC = () => {
   };
 
   return (
-    <div
-    // style={{ backgroundImage: "url('/movie.jpg')" }}
-    >
+    <div>
       <Image src="/movie.jpg" alt="Movie" layout="fill" objectFit="cover" />
 
       <div className="hero-content text-center text-neutral-content">
