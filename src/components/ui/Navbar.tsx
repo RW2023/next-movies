@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex items-center justify-between flex-wrap p-3 navbar mt-0 sticky top-0 z-20 bg-base-300 shadow-2xl bg-opacity-90"
+      className="flex items-center justify-between flex-wrap p-3 navbar mt-0 mb-4 sticky top-0 z-20 bg-base-300 shadow-2xl bg-opacity-90"
       style={{ fontFamily: "'Poppins', sans-serif" }}
       // data-theme="black"
     >
