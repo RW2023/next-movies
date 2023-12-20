@@ -22,7 +22,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
       </head>
-      <body>
+      <body className='min-h-screen'>
         <Navbar />
         {children}
       </body>
