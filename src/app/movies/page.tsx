@@ -46,7 +46,7 @@ const MoviesPage: React.FC = () => {
       <Image src="/movie.jpg" alt="Movie" layout="fill" objectFit="cover" />
 
       <div className="hero-content text-center text-neutral-content">
-        <div className="container mx-auto p-4 mb-4 bg-base-100 justify-center rounded-md drop-shadow-2xl">
+        <div className="container mx-auto p-4 mb-4 bg-base-100 justify-center rounded-md drop-shadow-2xl glass">
           <Heading title = "flix finder" iconClass='fas fa-film'/>
           <SearchBar onSearch={handleSearch} />
           {loading ? (
