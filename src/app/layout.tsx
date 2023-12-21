@@ -18,10 +18,10 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         />
-        <title>Flix Finder</title>
+        <title>Flixer</title>
         <meta name="description" content="Movie Finder App" />
       </head>
-      <body className="min-h-screen">
+      <body>
         <Navbar />
         {children}
       </body>
