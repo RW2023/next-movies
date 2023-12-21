@@ -27,7 +27,7 @@ const Navbar = () => {
             <div className="flex items-center">
               {' '}
               {/* Flexbox container */}
-              <SubHeading title="flix finder" iconClass="fas fa-film" />
+              <SubHeading title="flixer" iconClass="fas fa-film" />
             </div>
           </span>
         </Link>
