@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SubHeading from './SubHeading';
-import DarkModeToggle from './DarkModeToggle';
+// import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -124,7 +124,7 @@ const Navbar = () => {
               <i className="fas fa-envelope mr-2"></i>Contact
             </span>
           </Link>
-          <DarkModeToggle />
+          {/* <DarkModeToggle /> */}
         </div>
       </div>
     </nav>
