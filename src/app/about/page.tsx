@@ -12,15 +12,11 @@ export default function page() {
       }}
     >
       <div className="min-h-screen ">
-        {/* <div className=" border-1 bg-base-300 rounded-md flex-col my-8 w-1/5  mx-auto">
-          {' '}
-          <Heading title="About" iconClass="fas fa-info" />
-        </div> */}
         <div className="flex items-center justify-center bg-base-300 w-1/3 mx-auto mb-4 rounded glass">
           <SubHeading title="about FLixer" iconClass="fas fa-film" />
         </div>
-        <div className="container gap-5 grid grid-cols-1 md:grid-cols-2 items-center justify-center mx-auto mb-4">
-          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300">
+        <div className="container gap-5 grid grid-cols-1 md:grid-cols-2 items-center justify-center mx-auto mb-4 ">
+          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300 m-7">
             <div className="card-title">
               <SubHeading
                 title="what is flixer..?"
@@ -41,7 +37,7 @@ export default function page() {
               </ul>
             </div>
           </div>
-          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300">
+          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300 m-7">
             <div className="card-title">
               <SubHeading
                 title="upcoming features"
@@ -62,7 +58,7 @@ export default function page() {
               </ul>
             </div>
           </div>
-          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300">
+          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300 m-7">
             <div className="card-title">
               <SubHeading title="Feedback" iconClass="fas fa-info-circle" />
             </div>
@@ -72,7 +68,7 @@ export default function page() {
               <p>Your feedback is what I draw on to make improvements 😊</p>
             </div>
           </div>
-          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300">
+          <div className="card items-center border-2 rounded-md shadow-lg bg-base-300 m-7">
             <div className="card-title">
               <SubHeading
                 title="Upcoming versions"
