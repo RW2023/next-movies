@@ -65,7 +65,7 @@ const MoviesPage: React.FC = () => {
                   key={movie.imdbID}
                   className="bg-base-300 p-4 rounded shadow justify-center font-serif"
                 >
-                  <Link href={`/movies/${movie.imdbID}`}>
+                  {/* <Link href={`/movies/${movie.imdbID}`}> */}
                     <div className="block">
                       {movie.image ? (
                         <Image
@@ -88,7 +88,7 @@ const MoviesPage: React.FC = () => {
                         )}
                       </div>
                     </div>
-                  </Link>
+                  {/* </Link> */}
                 </li>
               ))}
             </ul>
