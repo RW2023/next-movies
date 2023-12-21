@@ -6,8 +6,9 @@ export default function page() {
   return (
     <div style={{ backgroundImage: `url(/movie.jpg)`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
       <div className="min-h-screen ">
-        <Heading title="About" iconClass="fas fa-info" />
-        <SubHeading title="FLix Finder" iconClass="fas fa-film" />
+        <div className='p-1 border-1 bg-base-300 rounded-md flex-col my-5 w-1/5 mt-5 mx-auto'>          <Heading title="About" iconClass="fas fa-info" />
+          <SubHeading title="FLix Finder" iconClass="fas fa-film" />
+        </div>
         <div className="container gap-5 grid grid-cols-1 md:grid-cols-2 items-center justify-center mx-auto">
           <div className="card items-center border-2 rounded-md shadow-lg bg-base-300">
             <div className="card-title">
