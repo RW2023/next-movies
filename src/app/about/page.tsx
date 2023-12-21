@@ -16,7 +16,7 @@ export default function page() {
           {' '}
           <Heading title="About" iconClass="fas fa-info" />
         </div> */}
-        <div className="flex items-center justify-center bg-base-300 w-1/5 mx-auto mb-4 rounded glass">
+        <div className="flex items-center justify-center bg-base-300 w-1/3 mx-auto mb-4 rounded glass">
           <SubHeading title="about FLixer" iconClass="fas fa-film" />
         </div>
         <div className="container gap-5 grid grid-cols-1 md:grid-cols-2 items-center justify-center mx-auto mb-4">
@@ -53,13 +53,11 @@ export default function page() {
                 <li>
                   <i className="fas fa-check p-2"></i>
                   Additional info for each result using dynamic routes (for the
-                  nerds). Whatever will enhance the user experience will be
-                  implement.
+                  nerds). Whatever will enhance the user experience.
                 </li>
                 <li>
                   <i className="fas fa-check p-2"></i>
-                  An add to favorite lists seems like the next logical feature
-                  after that.
+                  An add to favorite lists seems like the next logical feature.
                 </li>
               </ul>
             </div>
