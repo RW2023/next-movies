@@ -4,7 +4,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import SubHeading from './SubHeading';
-// import DarkModeToggle from './DarkModeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +12,6 @@ const Navbar = () => {
   const closeNavbar = () => {
     setIsOpen(false);
   };
-
-  // Construct Cloudinary URL for your image with transformations
-  const imageUrl = `https://res.cloudinary.com/wildev/image/upload/w_60,h_60,c_fill,g_face,r_max/sites/RW%20Images/me_yzjh2n.jpg`;
-
   return (
     <nav
       className="flex items-center justify-between flex-wrap p-3 navbar mt-0 mb-4 sticky top-0 z-20 bg-base-300 shadow-2xl bg-opacity-90"
@@ -32,16 +27,7 @@ const Navbar = () => {
             <div className="flex items-center">
               {' '}
               {/* Flexbox container */}
-              {/* Image */}
-              {/* <img
-                src={imageUrl}
-                alt="Ryan Wilson"
-                width="60"
-                height="60"
-                className="rounded-full"
-              /> */}
-              {/* SubHeading */}
-              <SubHeading title="flix finder" iconClass='fas fa-film' />
+              <SubHeading title="flix finder" iconClass="fas fa-film" />
             </div>
           </span>
         </Link>
@@ -91,8 +77,7 @@ const Navbar = () => {
         } w-full lg:flex lg:items-center lg:w-auto lg:justify-end`}
       >
         <div className="text-sm lg:flex-grow">
-          <Link
-          href={'/movies'}>
+          <Link href={'/movies'}>
             <span
               onClick={closeNavbar}
               className="block mt-4 lg:inline-block lg:mt-0 text-strokeLight text-xl hover:underline mr-4 cursor-pointer"
@@ -124,7 +109,6 @@ const Navbar = () => {
               <i className="fas fa-envelope mr-2"></i>Contact
             </span>
           </Link>
-          {/* <DarkModeToggle /> */}
         </div>
       </div>
     </nav>
