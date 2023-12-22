@@ -1,3 +1,45 @@
+# Flix Finder App 🎬
+
+## Overview
+
+Flix Finder is a dynamic web application that allows users to search and view detailed information about movies and TV shows 📺. Utilizing the IMDb API, it offers an extensive database of film and television content 🌟.
+
+## Technologies
+
+- **Next.js**: For server-side rendering and efficient API handling 🚀.
+- **React**: Utilized for building the user interface 💻.
+- **TypeScript**: For strong typing and reducing runtime errors 🔍.
+- **Axios**: For making API requests 🌐.
+- **Tailwind CSS**: For styling the application 👗.
+- **RapidAPI**: To access the IMDb API 📡.
+
+## Features
+
+- Movie and TV show search functionality 🔎.
+- Dynamic routing to individual movie or TV show detail pages 📄.
+- Responsive design for various screen sizes 📱.
+
+## Skills Required
+
+- Familiarity with React and Next.js frameworks 📘.
+- Understanding of TypeScript for type safety ⚙️.
+- Ability to work with external APIs  🤝.
+- Basic knowledge of CSS and responsive design principles 🎨.
+- Experience with state management in React (using hooks) 🪝.
+
+## How to Run
+
+1. Clone the repository 📁.
+2. Install dependencies: `npm install` or `yarn install` 📦.
+3. Set up environment variables for the IMDb API key 🔑.
+4. Run the development server: `npm run dev` or `yarn dev` 🏃‍♂️.
+5. Access the application via `http://localhost:3000` 🌍.
+
+## Contributing
+
+Contributions to the Flix Finder app are welcome 🤗. Please ensure to follow the existing coding style and submit pull requests for review ✍️.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
